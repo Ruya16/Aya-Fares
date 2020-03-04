@@ -52,7 +52,7 @@ interface Observer
 public void update(); 
 } 
 
-class ob implements Observer 
+class observer1 implements Observer 
 { 
 public void update() 
 { 
@@ -61,7 +61,7 @@ public void update()
 
 } 
 
-class obs implements Observer 
+class observer2 implements Observer 
 { 
 	 public void update() 
 { 
@@ -70,7 +70,7 @@ class obs implements Observer
 	 } 
 } 
 
-class obss implements Observer 
+class observer3 implements Observer 
 { 
 	 public void update() 
 { 
@@ -84,16 +84,16 @@ class Main
 { 
 public static void main(String args[]) 
 { 
-ob o1 = new ob(); 
-obs o2 = new obs(); 
-obss o3 = new obss(); 
+observer1 ob = new observer1(); 
+observer2 obs = new observer2(); 
+observer3 obss = new observer3(); 
 
 
 Subject su = new Subject(); 
 
-su.register(o1); 
-su.register(o2); 
-su.register(o3);
+su.register(ob); 
+su.register(obs); 
+su.register(obss);
 
 su.setflog(1);
 
